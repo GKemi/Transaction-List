@@ -11,20 +11,9 @@
 		BFF670292419385E004EA228 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF670282419385E004EA228 /* SceneDelegate.swift */; };
 		BFF6703024193860004EA228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF6702F24193860004EA228 /* Assets.xcassets */; };
 		BFF6703324193860004EA228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF6703124193860004EA228 /* LaunchScreen.storyboard */; };
-		BFF6703E24193860004EA228 /* Transaction_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6703D24193860004EA228 /* Transaction_ListTests.swift */; };
 		BFF6704A24193C1E004EA228 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF6704824193C1E004EA228 /* TransactionsViewController.swift */; };
 		BFF6704B24193C1E004EA228 /* TransactionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF6704924193C1E004EA228 /* TransactionsViewController.xib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		BFF6703A24193860004EA228 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFF6701B2419385E004EA228 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BFF670222419385E004EA228;
-			remoteInfo = "Transaction List";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BFF670232419385E004EA228 /* Transaction List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Transaction List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,22 +22,12 @@
 		BFF6702F24193860004EA228 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFF6703224193860004EA228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFF6703424193860004EA228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFF6703924193860004EA228 /* Transaction ListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Transaction ListTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFF6703D24193860004EA228 /* Transaction_ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction_ListTests.swift; sourceTree = "<group>"; };
-		BFF6703F24193860004EA228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFF6704824193C1E004EA228 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		BFF6704924193C1E004EA228 /* TransactionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BFF670202419385E004EA228 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BFF6703624193860004EA228 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,7 +42,6 @@
 			children = (
 				BFF670252419385E004EA228 /* Miscellaneous */,
 				BFF6704C24193C30004EA228 /* TransactionsList */,
-				BFF6703C24193860004EA228 /* Transaction ListTests */,
 				BFF670242419385E004EA228 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,7 +50,6 @@
 			isa = PBXGroup;
 			children = (
 				BFF670232419385E004EA228 /* Transaction List.app */,
-				BFF6703924193860004EA228 /* Transaction ListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,15 +64,6 @@
 				BFF6703424193860004EA228 /* Info.plist */,
 			);
 			path = Miscellaneous;
-			sourceTree = "<group>";
-		};
-		BFF6703C24193860004EA228 /* Transaction ListTests */ = {
-			isa = PBXGroup;
-			children = (
-				BFF6703D24193860004EA228 /* Transaction_ListTests.swift */,
-				BFF6703F24193860004EA228 /* Info.plist */,
-			);
-			path = "Transaction ListTests";
 			sourceTree = "<group>";
 		};
 		BFF6704C24193C30004EA228 /* TransactionsList */ = {
@@ -127,24 +95,6 @@
 			productReference = BFF670232419385E004EA228 /* Transaction List.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BFF6703824193860004EA228 /* Transaction ListTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BFF6704524193860004EA228 /* Build configuration list for PBXNativeTarget "Transaction ListTests" */;
-			buildPhases = (
-				BFF6703524193860004EA228 /* Sources */,
-				BFF6703624193860004EA228 /* Frameworks */,
-				BFF6703724193860004EA228 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BFF6703B24193860004EA228 /* PBXTargetDependency */,
-			);
-			name = "Transaction ListTests";
-			productName = "Transaction ListTests";
-			productReference = BFF6703924193860004EA228 /* Transaction ListTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -157,10 +107,6 @@
 				TargetAttributes = {
 					BFF670222419385E004EA228 = {
 						CreatedOnToolsVersion = 11.3.1;
-					};
-					BFF6703824193860004EA228 = {
-						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = BFF670222419385E004EA228;
 					};
 				};
 			};
@@ -178,7 +124,6 @@
 			projectRoot = "";
 			targets = (
 				BFF670222419385E004EA228 /* Transaction List */,
-				BFF6703824193860004EA228 /* Transaction ListTests */,
 			);
 		};
 /* End PBXProject section */
@@ -191,13 +136,6 @@
 				BFF6703324193860004EA228 /* LaunchScreen.storyboard in Resources */,
 				BFF6703024193860004EA228 /* Assets.xcassets in Resources */,
 				BFF6704B24193C1E004EA228 /* TransactionsViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BFF6703724193860004EA228 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,23 +152,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BFF6703524193860004EA228 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BFF6703E24193860004EA228 /* Transaction_ListTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		BFF6703B24193860004EA228 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BFF670222419385E004EA228 /* Transaction List */;
-			targetProxy = BFF6703A24193860004EA228 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BFF6703124193860004EA228 /* LaunchScreen.storyboard */ = {
@@ -394,50 +316,6 @@
 			};
 			name = Release;
 		};
-		BFF6704624193860004EA228 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AJ9777UUFQ;
-				INFOPLIST_FILE = "Transaction ListTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.gilhakemi.Transaction-ListTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Transaction List.app/Transaction List";
-			};
-			name = Debug;
-		};
-		BFF6704724193860004EA228 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AJ9777UUFQ;
-				INFOPLIST_FILE = "Transaction ListTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.gilhakemi.Transaction-ListTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Transaction List.app/Transaction List";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -455,15 +333,6 @@
 			buildConfigurations = (
 				BFF6704324193860004EA228 /* Debug */,
 				BFF6704424193860004EA228 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BFF6704524193860004EA228 /* Build configuration list for PBXNativeTarget "Transaction ListTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BFF6704624193860004EA228 /* Debug */,
-				BFF6704724193860004EA228 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
