@@ -14,6 +14,15 @@ class TransactionsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let networkClient = RESTNetworkClient()
+        let _ = TransactionJSONRepo(networkClient: networkClient).getLatestTransactions(completion: success)
     }
-
+    
+    func success(transactions: [Transaction]?) {
+        if let transactions = transactions {
+            for transaction in transactions {
+                print(transaction.name)
+            }
+        }
+    }
 }

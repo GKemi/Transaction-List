@@ -16,7 +16,7 @@ class RESTNetworkClient: NetworkClient {
     
     func retrieve(from endpoint: URL, completion: @escaping (Data?) -> Void){
         
-        let dataTask = URLSession.shared.dataTask(with: endpoint) { data, _, error in
+        URLSession.shared.dataTask(with: endpoint) { data, _, error in
             if let data = data {
                 completion(data)
             } else {

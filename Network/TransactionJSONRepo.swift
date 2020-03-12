@@ -19,31 +19,40 @@ class TransactionJSONRepo {
 
 extension TransactionJSONRepo: TransactionRepo {
     
-    func getLatestTransactions() -> [Transaction]? {
+    func getLatestTransactions(completion: @escaping ([Transaction]?) -> Void) {
+        
         guard let url = URL(string: transactionURL) else {
-            return nil
+            completion(nil)
+            return
         }
-        
-        networkClient.retrieve(from: url, completion: networkTaskCompletion)
-        
-        return nil
+        //maybe try using a optional function property, and simply guard against it
+        //use the bang operator when declaring it to make it 'lateinit'
+        networkClient.retrieve(from: url,
+                               completion: { data in
+            guard
+                let responseData = data,
+                let transactionResponse = try? JSONDecoder().decode(TransactionJSONResponse.self, from: responseData)
+            else {
+                return
+            }
+            
+            let transactions = self.convert(transactionResponse: transactionResponse)
+            completion(transactions)
+        })
     }
     
 }
 
 extension TransactionJSONRepo {
     
-    func networkTaskCompletion(data: Data?) {
-        guard
-            let data = data,
-            let transactionResponse = try? JSONDecoder().decode(TransactionJSONResponse.self, from: data)
-        else {
-            return
-        }
+    func convert(transactionResponse: TransactionJSONResponse) -> [Transaction] {
+        var transactionList = [Transaction]()
         
         for transaction in transactionResponse.data {
-            print(transaction.description)
+            transactionList.append(Transaction(name: transaction.description))
         }
+        
+        return transactionList
     }
     
 }

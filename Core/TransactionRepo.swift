@@ -9,5 +9,5 @@
 import Foundation
 
 protocol TransactionRepo {
-    func getLatestTransactions() -> [Transaction]?
+    func getLatestTransactions(completion: @escaping ([Transaction]?) -> Void)
 }
