@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TransactionResponse: Decodable {
+struct TransactionJSONResponse: Decodable {
     let data: [TransactionJSONModel]
 }
 

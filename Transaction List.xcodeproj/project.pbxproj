@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		96A0B356241961E800D3DF79 /* TransactionsRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0B355241961E800D3DF79 /* TransactionsRetriever.swift */; };
 		96A0B3592419621B00D3DF79 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0B3582419621B00D3DF79 /* Transaction.swift */; };
-		96A0B35C24197EE000D3DF79 /* TransactionJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0B35B24197EE000D3DF79 /* TransactionJSONModel.swift */; };
+		96A0B35C24197EE000D3DF79 /* TransactionJSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0B35B24197EE000D3DF79 /* TransactionJSONResponse.swift */; };
+		BFCE397F241A353F00B62FD9 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE397E241A353F00B62FD9 /* NetworkClient.swift */; };
+		BFCE3981241A376200B62FD9 /* TransactionRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE3980241A376200B62FD9 /* TransactionRepo.swift */; };
+		BFCE3984241A397100B62FD9 /* TransactionJSONRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE3983241A397100B62FD9 /* TransactionJSONRepo.swift */; };
 		BFF670272419385E004EA228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF670262419385E004EA228 /* AppDelegate.swift */; };
 		BFF670292419385E004EA228 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF670282419385E004EA228 /* SceneDelegate.swift */; };
 		BFF6703024193860004EA228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF6702F24193860004EA228 /* Assets.xcassets */; };
@@ -21,7 +24,10 @@
 /* Begin PBXFileReference section */
 		96A0B355241961E800D3DF79 /* TransactionsRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRetriever.swift; sourceTree = "<group>"; };
 		96A0B3582419621B00D3DF79 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		96A0B35B24197EE000D3DF79 /* TransactionJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionJSONModel.swift; sourceTree = "<group>"; };
+		96A0B35B24197EE000D3DF79 /* TransactionJSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionJSONResponse.swift; sourceTree = "<group>"; };
+		BFCE397E241A353F00B62FD9 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		BFCE3980241A376200B62FD9 /* TransactionRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepo.swift; sourceTree = "<group>"; };
+		BFCE3983241A397100B62FD9 /* TransactionJSONRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionJSONRepo.swift; sourceTree = "<group>"; };
 		BFF670232419385E004EA228 /* Transaction List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Transaction List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF670262419385E004EA228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF670282419385E004EA228 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +54,7 @@
 			children = (
 				96A0B355241961E800D3DF79 /* TransactionsRetriever.swift */,
 				96A0B3582419621B00D3DF79 /* Transaction.swift */,
+				BFCE3980241A376200B62FD9 /* TransactionRepo.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -55,16 +62,26 @@
 		96A0B35A24197EC200D3DF79 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				96A0B35B24197EE000D3DF79 /* TransactionJSONModel.swift */,
+				96A0B35B24197EE000D3DF79 /* TransactionJSONResponse.swift */,
+				BFCE397E241A353F00B62FD9 /* NetworkClient.swift */,
+				BFCE3983241A397100B62FD9 /* TransactionJSONRepo.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		BFCE3982241A391700B62FD9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BFF6704C24193C30004EA228 /* TransactionsList */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		BFF6701A2419385E004EA228 = {
 			isa = PBXGroup;
 			children = (
-				BFF670252419385E004EA228 /* Miscellaneous */,
-				BFF6704C24193C30004EA228 /* TransactionsList */,
+				BFF670252419385E004EA228 /* Application */,
+				BFCE3982241A391700B62FD9 /* UI */,
 				96A0B354241961B800D3DF79 /* Core */,
 				96A0B35A24197EC200D3DF79 /* Network */,
 				BFF670242419385E004EA228 /* Products */,
@@ -79,7 +96,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BFF670252419385E004EA228 /* Miscellaneous */ = {
+		BFF670252419385E004EA228 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				BFF670262419385E004EA228 /* AppDelegate.swift */,
@@ -88,7 +105,7 @@
 				BFF6703124193860004EA228 /* LaunchScreen.storyboard */,
 				BFF6703424193860004EA228 /* Info.plist */,
 			);
-			path = Miscellaneous;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		BFF6704C24193C30004EA228 /* TransactionsList */ = {
@@ -171,10 +188,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96A0B35C24197EE000D3DF79 /* TransactionJSONModel.swift in Sources */,
+				96A0B35C24197EE000D3DF79 /* TransactionJSONResponse.swift in Sources */,
 				96A0B356241961E800D3DF79 /* TransactionsRetriever.swift in Sources */,
 				BFF670272419385E004EA228 /* AppDelegate.swift in Sources */,
+				BFCE3984241A397100B62FD9 /* TransactionJSONRepo.swift in Sources */,
 				BFF670292419385E004EA228 /* SceneDelegate.swift in Sources */,
+				BFCE3981241A376200B62FD9 /* TransactionRepo.swift in Sources */,
+				BFCE397F241A353F00B62FD9 /* NetworkClient.swift in Sources */,
 				BFF6704A24193C1E004EA228 /* TransactionsViewController.swift in Sources */,
 				96A0B3592419621B00D3DF79 /* Transaction.swift in Sources */,
 			);
@@ -314,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AJ9777UUFQ;
-				INFOPLIST_FILE = Miscellaneous/Info.plist;
+				INFOPLIST_FILE = Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AJ9777UUFQ;
-				INFOPLIST_FILE = Miscellaneous/Info.plist;
+				INFOPLIST_FILE = Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
