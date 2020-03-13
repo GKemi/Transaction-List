@@ -20,10 +20,15 @@ class TransactionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
+        tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
         transactionsInteractor?.getTransactions()
     }
+}
+
+extension TransactionsViewController: UITableViewDelegate {
+    
 }
 
 extension TransactionsViewController: UITableViewDataSource {
