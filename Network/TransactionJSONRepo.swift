@@ -40,6 +40,7 @@ extension TransactionJSONRepo {
             let responseData = data,
             let transactionResponse = try? JSONDecoder().decode(TransactionJSONResponse.self, from: responseData)
         else {
+            completion(nil)
             return
         }
         
