@@ -23,9 +23,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         
         if let window = window {
+            let networkClient = RESTNetworkClient()
+            let transactionRepo = TransactionJSONRepo(networkClient: networkClient)
+            
+            let transactionListModel = TransactionsRetriever(transactionsRepo: transactionRepo)
+            
+            let transactionInteractor = TransactionsViewInteractor(transactionsListModel: transactionListModel)
+            let transactionsPresenter = TransactionsListPresenter()
+            let transactionsView = TransactionsViewController(nibName: "TransactionsViewController", bundle: nil)
+            
+            transactionInteractor.transactionsPresenter = transactionsPresenter
+            transactionsPresenter.transactionsView = transactionsView
+            transactionsView.transactionsInteractor = transactionInteractor
+            
             let masterNavController = UINavigationController()
-            let transactionListController = TransactionsViewController(nibName: "TransactionsViewController", bundle: nil)
-            masterNavController.pushViewController(transactionListController, animated: false)
+            masterNavController.pushViewController(transactionsView, animated: false)
             
             window.rootViewController = masterNavController
             window.makeKeyAndVisible()

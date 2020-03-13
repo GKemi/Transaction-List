@@ -8,21 +8,39 @@
 
 import UIKit
 
-class TransactionsViewController: UIViewController {
+protocol TransactionsView: class {
+    func show(transactions: [TransactionViewModel])
+}
 
+class TransactionsViewController: UIViewController {
+    var transactionsInteractor: TransactionsInteractor?
+    @IBOutlet weak var tableView: UITableView!
+    var tableData = [TransactionViewModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.dataSource = self
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
+        transactionsInteractor?.getTransactions()
+    }
+}
 
-        // Do any additional setup after loading the view.
-        let networkClient = RESTNetworkClient()
-        let _ = TransactionJSONRepo(networkClient: networkClient).getLatestTransactions(completion: success)
+extension TransactionsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableData.count
     }
     
-    func success(transactions: [Transaction]?) {
-        if let transactions = transactions {
-            for transaction in transactions {
-                print(transaction.name)
-            }
-        }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
+        cell.setTransaction(with: tableData[indexPath.row])
+        return cell
+    }
+}
+
+extension TransactionsViewController: TransactionsView {
+    func show(transactions: [TransactionViewModel]) {
+        self.tableData = transactions
+        tableView.reloadData()
     }
 }

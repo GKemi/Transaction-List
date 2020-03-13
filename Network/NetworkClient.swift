@@ -14,17 +14,19 @@ protocol NetworkClient {
 
 class RESTNetworkClient: NetworkClient {
     
-    func retrieve(from endpoint: URL, completion: @escaping (Data?) -> Void){
+    func retrieve(from endpoint: URL, completion: @escaping (Data?) -> Void) {
         
         URLSession.shared.dataTask(with: endpoint) { data, _, error in
-            if let data = data {
-                completion(data)
-            } else {
-                completion(nil)
+            
+            DispatchQueue.main.async {
+                if let data = data {
+                    completion(data)
+                } else {
+                    completion(nil)
+                }
             }
 
         }.resume()
-        
     }
     
 }

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96112CAF241C143400F067B5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96112CAD241C143400F067B5 /* TableViewCell.swift */; };
+		96112CB0241C143400F067B5 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96112CAE241C143400F067B5 /* TableViewCell.xib */; };
+		96112CB2241C19ED00F067B5 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96112CB1241C19ED00F067B5 /* TransactionViewModel.swift */; };
+		96112CB4241C1CF100F067B5 /* TransactionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96112CB3241C1CF100F067B5 /* TransactionsInteractor.swift */; };
+		96112CB6241C1DEB00F067B5 /* TransactionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96112CB5241C1DEB00F067B5 /* TransactionsPresenter.swift */; };
 		96A0B356241961E800D3DF79 /* TransactionsRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0B355241961E800D3DF79 /* TransactionsRetriever.swift */; };
 		96A0B3592419621B00D3DF79 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0B3582419621B00D3DF79 /* Transaction.swift */; };
 		96A0B35C24197EE000D3DF79 /* TransactionJSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0B35B24197EE000D3DF79 /* TransactionJSONResponse.swift */; };
@@ -22,6 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		96112CAD241C143400F067B5 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		96112CAE241C143400F067B5 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		96112CB1241C19ED00F067B5 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		96112CB3241C1CF100F067B5 /* TransactionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsInteractor.swift; sourceTree = "<group>"; };
+		96112CB5241C1DEB00F067B5 /* TransactionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenter.swift; sourceTree = "<group>"; };
 		96A0B355241961E800D3DF79 /* TransactionsRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRetriever.swift; sourceTree = "<group>"; };
 		96A0B3582419621B00D3DF79 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		96A0B35B24197EE000D3DF79 /* TransactionJSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionJSONResponse.swift; sourceTree = "<group>"; };
@@ -113,6 +123,11 @@
 			children = (
 				BFF6704824193C1E004EA228 /* TransactionsViewController.swift */,
 				BFF6704924193C1E004EA228 /* TransactionsViewController.xib */,
+				96112CAD241C143400F067B5 /* TableViewCell.swift */,
+				96112CAE241C143400F067B5 /* TableViewCell.xib */,
+				96112CB1241C19ED00F067B5 /* TransactionViewModel.swift */,
+				96112CB3241C1CF100F067B5 /* TransactionsInteractor.swift */,
+				96112CB5241C1DEB00F067B5 /* TransactionsPresenter.swift */,
 			);
 			path = TransactionsList;
 			sourceTree = "<group>";
@@ -176,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF6703324193860004EA228 /* LaunchScreen.storyboard in Resources */,
+				96112CB0241C143400F067B5 /* TableViewCell.xib in Resources */,
 				BFF6703024193860004EA228 /* Assets.xcassets in Resources */,
 				BFF6704B24193C1E004EA228 /* TransactionsViewController.xib in Resources */,
 			);
@@ -192,8 +208,12 @@
 				96A0B356241961E800D3DF79 /* TransactionsRetriever.swift in Sources */,
 				BFF670272419385E004EA228 /* AppDelegate.swift in Sources */,
 				BFCE3984241A397100B62FD9 /* TransactionJSONRepo.swift in Sources */,
+				96112CB2241C19ED00F067B5 /* TransactionViewModel.swift in Sources */,
 				BFF670292419385E004EA228 /* SceneDelegate.swift in Sources */,
+				96112CAF241C143400F067B5 /* TableViewCell.swift in Sources */,
+				96112CB4241C1CF100F067B5 /* TransactionsInteractor.swift in Sources */,
 				BFCE3981241A376200B62FD9 /* TransactionRepo.swift in Sources */,
+				96112CB6241C1DEB00F067B5 /* TransactionsPresenter.swift in Sources */,
 				BFCE397F241A353F00B62FD9 /* NetworkClient.swift in Sources */,
 				BFF6704A24193C1E004EA228 /* TransactionsViewController.swift in Sources */,
 				96A0B3592419621B00D3DF79 /* Transaction.swift in Sources */,

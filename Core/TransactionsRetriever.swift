@@ -9,9 +9,21 @@
 import Foundation
 
 protocol TransactionListModel {
-    
+    func getList(completion: @escaping ([Transaction]?) -> Void)
 }
 
-class TransactionsRetriever: TransactionListModel {
+class TransactionsRetriever {
+    let transactionsRepo: TransactionRepo
+    
+    init (transactionsRepo: TransactionRepo) {
+        self.transactionsRepo = transactionsRepo
+    }
+}
+
+extension TransactionsRetriever: TransactionListModel {
+    
+    func getList(completion: @escaping ([Transaction]?) -> Void) {
+        transactionsRepo.getLatestTransactions(completion: completion)
+    }
     
 }
