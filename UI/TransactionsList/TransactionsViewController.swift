@@ -20,15 +20,30 @@ class TransactionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let rightBarButtonItem = UIBarButtonItem()
+        rightBarButtonItem.title = "Edit"
+        rightBarButtonItem.target = self
+        rightBarButtonItem.action = #selector(editDoneButtonPressed)
+        navigationItem.rightBarButtonItem = rightBarButtonItem
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
         transactionsInteractor?.getTransactions()
     }
+    
+    @objc func editDoneButtonPressed() {
+        tableView.isEditing = !tableView.isEditing
+    }
 }
 
 extension TransactionsViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            tableData.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
 }
 
 extension TransactionsViewController: UITableViewDataSource {
