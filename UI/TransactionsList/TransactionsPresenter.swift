@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol TransactionsPresenter {
     func showTransactions(with transactions: [Transaction])
@@ -27,10 +28,28 @@ extension TransactionsListPresenter {
         var transactionViewModelList = [TransactionViewModel]()
         
         for transaction in transactions {
-            let transactionViewModel = TransactionViewModel(description: transaction.name)
+            let transactionViewModel = TransactionViewModel(description: transaction.description,
+                                                            category: transaction.category,
+                                                            amount: transaction.value,
+                                                            icon: UIImage())
+            
             transactionViewModelList.append(transactionViewModel)
         }
         
         return transactionViewModelList
+    }
+}
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
     }
 }

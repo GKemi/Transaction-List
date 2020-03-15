@@ -7,7 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 struct TransactionViewModel {
     let description: String
+    let category: String
+    let amount: String
+    let icon: UIImage
 }

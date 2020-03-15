@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,23 +16,51 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOP-oQ-Fy6">
-                        <rect key="frame" x="139" y="11.5" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOP-oQ-Fy6">
+                        <rect key="frame" x="56" y="4" width="88" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ftM-s8-m6l">
+                        <rect key="frame" x="16" y="10" width="24" height="24"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIC-1M-h1o">
+                        <rect key="frame" x="56" y="23" width="53" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFi-ps-HxK">
+                        <rect key="frame" x="246" y="10" width="42" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="EOP-oQ-Fy6" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="H91-Mb-bmQ"/>
-                    <constraint firstItem="EOP-oQ-Fy6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="xqB-8U-z89"/>
+                    <constraint firstAttribute="bottom" secondItem="sFi-ps-HxK" secondAttribute="bottom" constant="10" id="6y1-61-z0y"/>
+                    <constraint firstItem="sFi-ps-HxK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="97d-JP-C93"/>
+                    <constraint firstItem="EOP-oQ-Fy6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="IaC-m6-5TE"/>
+                    <constraint firstItem="EOP-oQ-Fy6" firstAttribute="leading" secondItem="ftM-s8-m6l" secondAttribute="trailing" constant="16" id="JhP-J2-f71"/>
+                    <constraint firstAttribute="bottom" secondItem="EOP-oQ-Fy6" secondAttribute="bottom" constant="16" id="LRt-EM-NGE"/>
+                    <constraint firstItem="ftM-s8-m6l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="NYg-OG-NIF"/>
+                    <constraint firstItem="zIC-1M-h1o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="byK-bF-1cj"/>
+                    <constraint firstAttribute="bottom" secondItem="zIC-1M-h1o" secondAttribute="bottom" constant="6" id="d1A-No-NHf"/>
+                    <constraint firstAttribute="trailing" secondItem="EOP-oQ-Fy6" secondAttribute="trailing" constant="176" id="i1e-16-O59"/>
+                    <constraint firstAttribute="trailing" secondItem="zIC-1M-h1o" secondAttribute="trailing" constant="211" id="ivV-JM-r8g"/>
+                    <constraint firstAttribute="bottom" secondItem="ftM-s8-m6l" secondAttribute="bottom" constant="10" id="kPH-o0-OV8"/>
+                    <constraint firstItem="sFi-ps-HxK" firstAttribute="leading" secondItem="EOP-oQ-Fy6" secondAttribute="trailing" constant="102" id="kjt-F3-QpQ"/>
+                    <constraint firstItem="ftM-s8-m6l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="oms-Xc-OUy"/>
+                    <constraint firstItem="zIC-1M-h1o" firstAttribute="leading" secondItem="ftM-s8-m6l" secondAttribute="trailing" constant="16" id="utf-Tb-ZEp"/>
+                    <constraint firstAttribute="trailing" secondItem="sFi-ps-HxK" secondAttribute="trailing" constant="32" id="wNn-hR-Dwi"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="transactionDescription" destination="EOP-oQ-Fy6" id="mTY-8j-11a"/>
             </connections>
-            <point key="canvasLocation" x="132" y="153"/>
+            <point key="canvasLocation" x="128.98550724637681" y="154.6875"/>
         </tableViewCell>
     </objects>
 </document>

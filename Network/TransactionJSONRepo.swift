@@ -52,7 +52,14 @@ extension TransactionJSONRepo {
         var transactionList = [Transaction]()
         
         for transaction in transactionResponse.data {
-            transactionList.append(Transaction(name: transaction.description))
+            let transactionEntity = Transaction(description: transaction.description,
+                                                category: transaction.category,
+                                                currency: transaction.currency,
+                                                value: String(transaction.amount.value),
+                                                icon: ["title" : transaction.product.title,
+                                                       "url" : transaction.product.icon])
+            
+            transactionList.append(transactionEntity)
         }
         
         return transactionList

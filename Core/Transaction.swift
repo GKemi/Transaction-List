@@ -9,5 +9,9 @@
 import Foundation
 
 struct Transaction {
-    let name: String
+    let description: String
+    let category: String
+    let currency: String
+    let value: String
+    let icon: [String : String]
 }

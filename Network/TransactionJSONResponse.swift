@@ -14,4 +14,17 @@ struct TransactionJSONResponse: Decodable {
 
 struct TransactionJSONModel: Decodable {
     let description: String
+    let category: String
+    let currency: String
+    let amount: TransactionAmount
+    let product: TransactionProduct
+}
+
+struct TransactionAmount: Decodable {
+    let value: Double
+}
+
+struct TransactionProduct: Decodable {
+    let title: String
+    let icon: String
 }
