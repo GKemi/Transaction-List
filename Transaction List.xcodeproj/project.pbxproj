@@ -11,6 +11,8 @@
 		960CF0C8241FF02000D8F195 /* MockTransactionRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960CF0C7241FF02000D8F195 /* MockTransactionRepo.swift */; };
 		960CF0CA241FF23100D8F195 /* TransactionPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960CF0C9241FF23100D8F195 /* TransactionPresenterTests.swift */; };
 		960CF0CC241FF60400D8F195 /* MockTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960CF0CB241FF60400D8F195 /* MockTransactionView.swift */; };
+		960CF0D0241FFC1700D8F195 /* TransactionRepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960CF0CF241FFC1700D8F195 /* TransactionRepoTests.swift */; };
+		960CF0D2241FFCF600D8F195 /* MockNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960CF0D1241FFCF600D8F195 /* MockNetworkClient.swift */; };
 		96112CAF241C143400F067B5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96112CAD241C143400F067B5 /* TableViewCell.swift */; };
 		96112CB0241C143400F067B5 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96112CAE241C143400F067B5 /* TableViewCell.xib */; };
 		96112CB2241C19ED00F067B5 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96112CB1241C19ED00F067B5 /* TransactionViewModel.swift */; };
@@ -50,6 +52,8 @@
 		960CF0C7241FF02000D8F195 /* MockTransactionRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionRepo.swift; sourceTree = "<group>"; };
 		960CF0C9241FF23100D8F195 /* TransactionPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPresenterTests.swift; sourceTree = "<group>"; };
 		960CF0CB241FF60400D8F195 /* MockTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionView.swift; sourceTree = "<group>"; };
+		960CF0CF241FFC1700D8F195 /* TransactionRepoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepoTests.swift; sourceTree = "<group>"; };
+		960CF0D1241FFCF600D8F195 /* MockNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkClient.swift; sourceTree = "<group>"; };
 		96112CAD241C143400F067B5 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		96112CAE241C143400F067B5 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		96112CB1241C19ED00F067B5 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				960CF0C2241FEEE300D8F195 /* TransactionListModelTests.swift */,
 				960CF0C1241FEEE300D8F195 /* TransactionListTests-Bridging-Header.h */,
 				960CF0C9241FF23100D8F195 /* TransactionPresenterTests.swift */,
+				960CF0CF241FFC1700D8F195 /* TransactionRepoTests.swift */,
 			);
 			path = TransactionListTests;
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 			children = (
 				960CF0C7241FF02000D8F195 /* MockTransactionRepo.swift */,
 				960CF0CB241FF60400D8F195 /* MockTransactionView.swift */,
+				960CF0D1241FFCF600D8F195 /* MockNetworkClient.swift */,
 			);
 			path = "Test Doubles";
 			sourceTree = "<group>";
@@ -301,9 +307,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				960CF0C8241FF02000D8F195 /* MockTransactionRepo.swift in Sources */,
+				960CF0D2241FFCF600D8F195 /* MockNetworkClient.swift in Sources */,
 				960CF0C3241FEEE300D8F195 /* TransactionListModelTests.swift in Sources */,
 				960CF0CA241FF23100D8F195 /* TransactionPresenterTests.swift in Sources */,
 				960CF0CC241FF60400D8F195 /* MockTransactionView.swift in Sources */,
+				960CF0D0241FFC1700D8F195 /* TransactionRepoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
