@@ -13,5 +13,10 @@ struct Transaction {
     let category: String
     let currency: String
     let value: Double
-    let icon: [String : String]
+    let icon: TransactionIcon
+}
+
+struct TransactionIcon {
+    let title: String
+    let url: String
 }

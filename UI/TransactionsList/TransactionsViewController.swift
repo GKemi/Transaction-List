@@ -38,6 +38,34 @@ class TransactionsViewController: UIViewController {
         transactionsInteractor?.getTransactions()
     }
     
+}
+
+extension TransactionsViewController: TransactionsView {
+    func show(transactions: [TransactionViewModel]) {
+        self.tableData = transactions
+        tableView.reloadData()
+    }
+}
+
+extension TransactionsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return self.isEditing
+    }
+}
+
+extension TransactionsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
+        cell.setTransaction(with: tableData[indexPath.row])
+        return cell
+    }
+}
+
+extension TransactionsViewController {
     @objc func editDoneButtonPressed() {
         tableView.isEditing = !tableView.isEditing
         if tableView.isEditing {
@@ -65,30 +93,5 @@ class TransactionsViewController: UIViewController {
             
             tableView.deleteRows(at: selectedRows, with: .left)
         }
-    }
-}
-
-extension TransactionsViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return self.isEditing
-    }
-}
-
-extension TransactionsViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableData.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
-        cell.setTransaction(with: tableData[indexPath.row])
-        return cell
-    }
-}
-
-extension TransactionsViewController: TransactionsView {
-    func show(transactions: [TransactionViewModel]) {
-        self.tableData = transactions
-        tableView.reloadData()
     }
 }

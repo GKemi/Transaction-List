@@ -56,8 +56,8 @@ extension TransactionJSONRepo {
                                                 category: transaction.category,
                                                 currency: transaction.currency,
                                                 value: transaction.amount.value,
-                                                icon: ["title" : transaction.product.title,
-                                                       "url" : transaction.product.icon])
+                                                icon: TransactionIcon(title: transaction.product.title,
+                                                                      url: transaction.product.icon))
             
             transactionList.append(transactionEntity)
         }

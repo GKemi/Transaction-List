@@ -33,7 +33,7 @@ extension TransactionsListPresenter {
             let transactionViewModel = TransactionViewModel(description: transaction.description,
                                                             category: transaction.category,
                                                             value: price,
-                                                            icon: transaction.icon["url"] ?? "nil")
+                                                            icon: transaction.icon.url)
             
             transactionViewModelList.append(transactionViewModel)
         }
