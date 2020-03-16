@@ -55,7 +55,7 @@ extension TransactionJSONRepo {
             let transactionEntity = Transaction(description: transaction.description,
                                                 category: transaction.category,
                                                 currency: transaction.currency,
-                                                value: String(transaction.amount.value),
+                                                value: transaction.amount.value,
                                                 icon: ["title" : transaction.product.title,
                                                        "url" : transaction.product.icon])
             

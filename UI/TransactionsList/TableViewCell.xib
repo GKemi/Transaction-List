@@ -47,20 +47,19 @@
                     <constraint firstItem="OZd-h9-Hyp" firstAttribute="leading" secondItem="ftM-s8-m6l" secondAttribute="trailing" constant="16" id="GsL-T1-Z8z"/>
                     <constraint firstAttribute="bottom" secondItem="NCV-Cb-jT4" secondAttribute="bottom" constant="21" id="LVM-tI-O32"/>
                     <constraint firstItem="ftM-s8-m6l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="LgV-km-iOZ"/>
-                    <constraint firstAttribute="trailing" secondItem="NCV-Cb-jT4" secondAttribute="trailing" constant="16" id="NTH-3H-3kf"/>
                     <constraint firstAttribute="bottom" secondItem="OZd-h9-Hyp" secondAttribute="bottom" constant="27" id="TGn-9s-xHS"/>
-                    <constraint firstItem="NCV-Cb-jT4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="265" id="b0Z-Ft-AsQ"/>
                     <constraint firstItem="UbS-MD-Q8X" firstAttribute="top" secondItem="OZd-h9-Hyp" secondAttribute="bottom" constant="4" id="bJX-xn-MaU"/>
                     <constraint firstAttribute="bottom" secondItem="UbS-MD-Q8X" secondAttribute="bottom" constant="8" id="e8q-gq-6YP"/>
                     <constraint firstItem="ftM-s8-m6l" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.1" id="fGs-aR-0mA"/>
+                    <constraint firstItem="NCV-Cb-jT4" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="fax-JO-wqV"/>
                     <constraint firstItem="UbS-MD-Q8X" firstAttribute="leading" secondItem="ftM-s8-m6l" secondAttribute="trailing" constant="16" id="vAB-Gv-rvb"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="bankIcon" destination="ftM-s8-m6l" id="BOb-aF-p5M"/>
                 <outlet property="transactionCategory" destination="UbS-MD-Q8X" id="6bw-eN-dDv"/>
                 <outlet property="transactionDescription" destination="OZd-h9-Hyp" id="pWa-JQ-IP2"/>
+                <outlet property="transactionIcon" destination="ftM-s8-m6l" id="TgV-ZE-BCA"/>
                 <outlet property="transactionPrice" destination="NCV-Cb-jT4" id="iOm-FV-16b"/>
             </connections>
             <point key="canvasLocation" x="128.98550724637681" y="161.38392857142856"/>

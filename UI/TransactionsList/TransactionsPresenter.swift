@@ -28,29 +28,16 @@ extension TransactionsListPresenter {
         var transactionViewModelList = [TransactionViewModel]()
         
         for transaction in transactions {
+            let price = PriceFormatter().formatPrice(with: transaction.value, currency: transaction.currency)
+
             let transactionViewModel = TransactionViewModel(description: transaction.description,
                                                             category: transaction.category,
-                                                            amount: transaction.value,
+                                                            value: price,
                                                             icon: transaction.icon["url"] ?? "nil")
             
             transactionViewModelList.append(transactionViewModel)
         }
         
         return transactionViewModelList
-    }
-}
-
-extension UIImageView {
-    func load(url: String) {
-        DispatchQueue.global().async { [weak self] in
-            guard let imageUrl = URL(string: url) else { return }
-            if let data = try? Data(contentsOf: imageUrl) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
     }
 }

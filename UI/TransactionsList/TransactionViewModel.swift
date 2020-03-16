@@ -12,6 +12,6 @@ import UIKit
 struct TransactionViewModel: Equatable {
     let description: String
     let category: String
-    let amount: String
+    let value: String
     let icon: String
 }
