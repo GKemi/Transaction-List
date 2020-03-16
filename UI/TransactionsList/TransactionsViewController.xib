@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionsViewController" customModule="Transaction_List" customModuleProvider="target">
             <connections>
+                <outlet property="removeButton" destination="iR8-ai-VbW" id="uI8-Pl-XeN"/>
                 <outlet property="tableView" destination="aoK-9N-bCp" id="aoG-9N-aJP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,16 +23,32 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iR8-ai-VbW">
+                    <rect key="frame" x="0.0" y="820" width="414" height="42"/>
+                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" red="0.69588286055184401" green="0.23281438048126379" blue="0.18225507772587662" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Remove">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="removeButtonPressed:" destination="-1" eventType="touchUpInside" id="4tH-W3-oSo"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="iR8-ai-VbW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3zB-gR-JsR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="aoK-9N-bCp" secondAttribute="bottom" id="QYD-uO-7fJ"/>
                 <constraint firstItem="aoK-9N-bCp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XMa-mS-j5E"/>
                 <constraint firstItem="aoK-9N-bCp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Z8E-U0-wzR"/>
+                <constraint firstAttribute="trailing" secondItem="iR8-ai-VbW" secondAttribute="trailing" id="cUt-HU-za0"/>
+                <constraint firstItem="iR8-ai-VbW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pCC-38-WKY"/>
+                <constraint firstItem="iR8-ai-VbW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="820" id="rJS-DW-Ilp"/>
+                <constraint firstItem="iR8-ai-VbW" firstAttribute="bottom" secondItem="aoK-9N-bCp" secondAttribute="bottom" id="tGO-Eb-eMi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aoK-9N-bCp" secondAttribute="trailing" id="zNS-b9-VCx"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="132" y="153"/>
+            <point key="canvasLocation" x="131.8840579710145" y="152.67857142857142"/>
         </view>
     </objects>
 </document>

@@ -14,8 +14,6 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var transactionPrice: UILabel!
     @IBOutlet weak var bankIcon: UIImageView!
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

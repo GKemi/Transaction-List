@@ -31,8 +31,8 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCV-Cb-jT4">
-                        <rect key="frame" x="249" y="22" width="39" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCV-Cb-jT4">
+                        <rect key="frame" x="265" y="22" width="39" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -41,17 +41,18 @@
                 <constraints>
                     <constraint firstItem="ftM-s8-m6l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="0DM-qd-eNh"/>
                     <constraint firstItem="ftM-s8-m6l" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.5" id="2Fk-Uo-I6f"/>
+                    <constraint firstItem="NCV-Cb-jT4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="5Cb-DD-nlR"/>
                     <constraint firstAttribute="bottom" secondItem="ftM-s8-m6l" secondAttribute="bottom" constant="16" id="9Cg-EC-9ez"/>
-                    <constraint firstItem="NCV-Cb-jT4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="A86-ea-Nkd"/>
                     <constraint firstItem="OZd-h9-Hyp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="F5i-Bt-vkc"/>
                     <constraint firstItem="OZd-h9-Hyp" firstAttribute="leading" secondItem="ftM-s8-m6l" secondAttribute="trailing" constant="16" id="GsL-T1-Z8z"/>
+                    <constraint firstAttribute="bottom" secondItem="NCV-Cb-jT4" secondAttribute="bottom" constant="21" id="LVM-tI-O32"/>
                     <constraint firstItem="ftM-s8-m6l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="LgV-km-iOZ"/>
+                    <constraint firstAttribute="trailing" secondItem="NCV-Cb-jT4" secondAttribute="trailing" constant="16" id="NTH-3H-3kf"/>
                     <constraint firstAttribute="bottom" secondItem="OZd-h9-Hyp" secondAttribute="bottom" constant="27" id="TGn-9s-xHS"/>
+                    <constraint firstItem="NCV-Cb-jT4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="265" id="b0Z-Ft-AsQ"/>
                     <constraint firstItem="UbS-MD-Q8X" firstAttribute="top" secondItem="OZd-h9-Hyp" secondAttribute="bottom" constant="4" id="bJX-xn-MaU"/>
                     <constraint firstAttribute="bottom" secondItem="UbS-MD-Q8X" secondAttribute="bottom" constant="8" id="e8q-gq-6YP"/>
                     <constraint firstItem="ftM-s8-m6l" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.1" id="fGs-aR-0mA"/>
-                    <constraint firstAttribute="bottom" secondItem="NCV-Cb-jT4" secondAttribute="bottom" constant="21" id="qkz-th-wGO"/>
-                    <constraint firstAttribute="trailing" secondItem="NCV-Cb-jT4" secondAttribute="trailing" constant="32" id="rB2-ap-JDf"/>
                     <constraint firstItem="UbS-MD-Q8X" firstAttribute="leading" secondItem="ftM-s8-m6l" secondAttribute="trailing" constant="16" id="vAB-Gv-rvb"/>
                 </constraints>
             </tableViewCellContentView>

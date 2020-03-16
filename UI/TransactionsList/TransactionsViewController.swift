@@ -13,12 +13,16 @@ protocol TransactionsView: class {
 }
 
 class TransactionsViewController: UIViewController {
-    var transactionsInteractor: TransactionsInteractor?
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var removeButton: UIButton!
+    
+    var transactionsInteractor: TransactionsInteractor?
     var tableData = [TransactionViewModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        removeButton.isHidden = true
         
         let rightBarButtonItem = UIBarButtonItem()
         rightBarButtonItem.title = "Edit"
@@ -28,6 +32,7 @@ class TransactionsViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.allowsMultipleSelectionDuringEditing = true
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
         tableView.separatorInset = .zero
         transactionsInteractor?.getTransactions()
@@ -35,15 +40,37 @@ class TransactionsViewController: UIViewController {
     
     @objc func editDoneButtonPressed() {
         tableView.isEditing = !tableView.isEditing
+        if tableView.isEditing {
+            navigationItem.rightBarButtonItem?.title = "Done"
+            removeButton.isHidden = false
+        } else {
+            navigationItem.rightBarButtonItem?.title = "Edit"
+            removeButton.isHidden = true
+        }
+    }
+    
+    @IBAction func removeButtonPressed(_ sender: Any) {
+        if let selectedRows = tableView.indexPathsForSelectedRows {
+            var transactionData = [TransactionViewModel]()
+            
+            for indexPath in selectedRows  {
+                transactionData.append(tableData[indexPath.row])
+            }
+
+            for item in transactionData {
+                if let index = tableData.firstIndex(of: item) {
+                    tableData.remove(at: index)
+                }
+            }
+            
+            tableView.deleteRows(at: selectedRows, with: .left)
+        }
     }
 }
 
 extension TransactionsViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == .delete) {
-            tableData.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-        }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return self.isEditing
     }
 }
 
