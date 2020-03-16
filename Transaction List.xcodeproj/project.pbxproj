@@ -38,7 +38,7 @@
 		96A0B3582419621B00D3DF79 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		96A0B35B24197EE000D3DF79 /* TransactionJSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionJSONResponse.swift; sourceTree = "<group>"; };
 		96F1B273241FBD85002F1807 /* PriceFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFormatter.swift; sourceTree = "<group>"; };
-		96F1B278241FC60C002F1807 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		96F1B278241FC60C002F1807 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = ../TransactionsList/ImageLoader.swift; sourceTree = "<group>"; };
 		BFCE397E241A353F00B62FD9 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		BFCE3980241A376200B62FD9 /* TransactionRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRepo.swift; sourceTree = "<group>"; };
 		BFCE3983241A397100B62FD9 /* TransactionJSONRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionJSONRepo.swift; sourceTree = "<group>"; };
@@ -87,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				96F1B273241FBD85002F1807 /* PriceFormatter.swift */,
+				96F1B278241FC60C002F1807 /* ImageLoader.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -134,7 +135,6 @@
 		BFF6704C24193C30004EA228 /* TransactionsList */ = {
 			isa = PBXGroup;
 			children = (
-				96F1B278241FC60C002F1807 /* ImageLoader.swift */,
 				BFF6704824193C1E004EA228 /* TransactionsViewController.swift */,
 				BFF6704924193C1E004EA228 /* TransactionsViewController.xib */,
 				96112CAD241C143400F067B5 /* TableViewCell.swift */,
