@@ -26,6 +26,22 @@ class TransactionRepoTests: XCTestCase {
         
         thenTransactionsAreAvailable()
     }
+    
+    func testRepoReturnsNil_whenJSONIsMissingValues() {
+        givenThereIsJSONWithMissingContent()
+        
+        whenTransactionListIsRequestedFromRepo()
+        
+        thenTransactionsAreNOTAvailable()
+    }
+    
+    func testRepoReturnsNil_whenJSONIsInvalid() {
+        givenThereIsInvalidJSON()
+        
+        whenTransactionListIsRequestedFromRepo()
+        
+        thenTransactionsAreNOTAvailable()
+    }
 }
 
 extension TransactionRepoTests {
@@ -54,6 +70,30 @@ extension TransactionRepoTests {
         """
     }
     
+    func givenThereIsJSONWithMissingContent() {
+        networkClient.jsonContent = """
+        {
+            "data":   [{
+                          "id": "13acb877dc4d8030c5dacbde33d3496a2ae3asdc000db4c793bda9c3228baca1a28",
+                          "date": "2018-03-19",
+                          "description": "Forbidden planet",
+                          "category": "General",
+                          "amount":
+                          {
+                            "value": 13,
+                            "currency_iso": "GBP"
+                          },
+                    }]
+        }
+        """
+    }
+    
+    func givenThereIsInvalidJSON() {
+        networkClient.jsonContent = """
+        fsdjgsdkjfgbdklfgnjsdgnkolnfgsd
+        """
+    }
+    
     func whenTransactionListIsRequestedFromRepo() {
         transactionRepo.getLatestTransactions(completion: {transactions in
             self.transactionData = transactions
@@ -62,5 +102,9 @@ extension TransactionRepoTests {
     
     func thenTransactionsAreAvailable() {
         XCTAssertNotNil(transactionData)
+    }
+    
+    func thenTransactionsAreNOTAvailable() {
+        XCTAssertNil(transactionData)
     }
 }
