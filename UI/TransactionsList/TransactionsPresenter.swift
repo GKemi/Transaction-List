@@ -10,16 +10,19 @@ import Foundation
 import UIKit
 
 protocol TransactionsPresenter {
-    func showTransactions(with transactions: [Transaction])
+    func showTransactions(with transactions: [Transaction]?)
 }
 
 class TransactionsListPresenter: TransactionsPresenter {
     weak var transactionsView: TransactionsView?
     
-    func showTransactions(with transactions: [Transaction]) {
-        let transactionsViewModelList = adapt(transactions: transactions)
+    func showTransactions(with transactions: [Transaction]?) {
+        if let transactions = transactions {
+            let transactionsViewModelList = adapt(transactions: transactions)
+            
+            transactionsView?.show(transactions: transactionsViewModelList)
+        }
         
-        transactionsView?.show(transactions: transactionsViewModelList)
     }
 }
 

@@ -22,7 +22,7 @@ class TransactionsViewInteractor: TransactionsInteractor {
     
     func getTransactions() {
         transactionsListModel.getList(completion: { transactions in
-            self.transactionsPresenter?.showTransactions(with: transactions!)
+            self.transactionsPresenter?.showTransactions(with: transactions)
         })
     }
 }

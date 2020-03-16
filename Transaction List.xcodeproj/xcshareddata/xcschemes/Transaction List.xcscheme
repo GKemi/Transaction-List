@@ -38,6 +38,16 @@
                ReferencedContainer = "container:Transaction List.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "960CF0B6241FEE9300D8F195"
+               BuildableName = "TransactionListTests.xctest"
+               BlueprintName = "TransactionListTests"
+               ReferencedContainer = "container:Transaction List.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

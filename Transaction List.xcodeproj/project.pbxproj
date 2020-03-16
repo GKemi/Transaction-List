@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		960CF0C3241FEEE300D8F195 /* TransactionListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960CF0C2241FEEE300D8F195 /* TransactionListModelTests.swift */; };
+		960CF0C8241FF02000D8F195 /* MockTransactionRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960CF0C7241FF02000D8F195 /* MockTransactionRepo.swift */; };
+		960CF0CA241FF23100D8F195 /* TransactionPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960CF0C9241FF23100D8F195 /* TransactionPresenterTests.swift */; };
+		960CF0CC241FF60400D8F195 /* MockTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960CF0CB241FF60400D8F195 /* MockTransactionView.swift */; };
 		96112CAF241C143400F067B5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96112CAD241C143400F067B5 /* TableViewCell.swift */; };
 		96112CB0241C143400F067B5 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96112CAE241C143400F067B5 /* TableViewCell.xib */; };
 		96112CB2241C19ED00F067B5 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96112CB1241C19ED00F067B5 /* TransactionViewModel.swift */; };
 		96112CB4241C1CF100F067B5 /* TransactionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96112CB3241C1CF100F067B5 /* TransactionsInteractor.swift */; };
 		96112CB6241C1DEB00F067B5 /* TransactionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96112CB5241C1DEB00F067B5 /* TransactionsPresenter.swift */; };
-		96A0B356241961E800D3DF79 /* TransactionsRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0B355241961E800D3DF79 /* TransactionsRetriever.swift */; };
+		96A0B356241961E800D3DF79 /* TransactionListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0B355241961E800D3DF79 /* TransactionListModel.swift */; };
 		96A0B3592419621B00D3DF79 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0B3582419621B00D3DF79 /* Transaction.swift */; };
 		96A0B35C24197EE000D3DF79 /* TransactionJSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0B35B24197EE000D3DF79 /* TransactionJSONResponse.swift */; };
 		96F1B274241FBD85002F1807 /* PriceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F1B273241FBD85002F1807 /* PriceFormatter.swift */; };
@@ -28,13 +32,30 @@
 		BFF6704B24193C1E004EA228 /* TransactionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF6704924193C1E004EA228 /* TransactionsViewController.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		960CF0BC241FEE9300D8F195 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFF6701B2419385E004EA228 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFF670222419385E004EA228;
+			remoteInfo = "Transaction List";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		960CF0B7241FEE9300D8F195 /* TransactionListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		960CF0BB241FEE9300D8F195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		960CF0C1241FEEE300D8F195 /* TransactionListTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TransactionListTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		960CF0C2241FEEE300D8F195 /* TransactionListModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListModelTests.swift; sourceTree = "<group>"; };
+		960CF0C7241FF02000D8F195 /* MockTransactionRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionRepo.swift; sourceTree = "<group>"; };
+		960CF0C9241FF23100D8F195 /* TransactionPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPresenterTests.swift; sourceTree = "<group>"; };
+		960CF0CB241FF60400D8F195 /* MockTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionView.swift; sourceTree = "<group>"; };
 		96112CAD241C143400F067B5 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		96112CAE241C143400F067B5 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		96112CB1241C19ED00F067B5 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 		96112CB3241C1CF100F067B5 /* TransactionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsInteractor.swift; sourceTree = "<group>"; };
 		96112CB5241C1DEB00F067B5 /* TransactionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenter.swift; sourceTree = "<group>"; };
-		96A0B355241961E800D3DF79 /* TransactionsRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRetriever.swift; sourceTree = "<group>"; };
+		96A0B355241961E800D3DF79 /* TransactionListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListModel.swift; sourceTree = "<group>"; };
 		96A0B3582419621B00D3DF79 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		96A0B35B24197EE000D3DF79 /* TransactionJSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionJSONResponse.swift; sourceTree = "<group>"; };
 		96F1B273241FBD85002F1807 /* PriceFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFormatter.swift; sourceTree = "<group>"; };
@@ -53,6 +74,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		960CF0B4241FEE9300D8F195 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BFF670202419385E004EA228 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,10 +91,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		960CF0B8241FEE9300D8F195 /* TransactionListTests */ = {
+			isa = PBXGroup;
+			children = (
+				960CF0C4241FEF7500D8F195 /* Test Doubles */,
+				960CF0BB241FEE9300D8F195 /* Info.plist */,
+				960CF0C2241FEEE300D8F195 /* TransactionListModelTests.swift */,
+				960CF0C1241FEEE300D8F195 /* TransactionListTests-Bridging-Header.h */,
+				960CF0C9241FF23100D8F195 /* TransactionPresenterTests.swift */,
+			);
+			path = TransactionListTests;
+			sourceTree = "<group>";
+		};
+		960CF0C4241FEF7500D8F195 /* Test Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				960CF0C7241FF02000D8F195 /* MockTransactionRepo.swift */,
+				960CF0CB241FF60400D8F195 /* MockTransactionView.swift */,
+			);
+			path = "Test Doubles";
+			sourceTree = "<group>";
+		};
 		96A0B354241961B800D3DF79 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				96A0B355241961E800D3DF79 /* TransactionsRetriever.swift */,
+				96A0B355241961E800D3DF79 /* TransactionListModel.swift */,
 				96A0B3582419621B00D3DF79 /* Transaction.swift */,
 				BFCE3980241A376200B62FD9 /* TransactionRepo.swift */,
 			);
@@ -108,6 +157,7 @@
 				BFCE3982241A391700B62FD9 /* UI */,
 				96A0B354241961B800D3DF79 /* Core */,
 				96A0B35A24197EC200D3DF79 /* Network */,
+				960CF0B8241FEE9300D8F195 /* TransactionListTests */,
 				BFF670242419385E004EA228 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				BFF670232419385E004EA228 /* Transaction List.app */,
+				960CF0B7241FEE9300D8F195 /* TransactionListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +200,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		960CF0B6241FEE9300D8F195 /* TransactionListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 960CF0BE241FEE9300D8F195 /* Build configuration list for PBXNativeTarget "TransactionListTests" */;
+			buildPhases = (
+				960CF0B3241FEE9300D8F195 /* Sources */,
+				960CF0B4241FEE9300D8F195 /* Frameworks */,
+				960CF0B5241FEE9300D8F195 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				960CF0BD241FEE9300D8F195 /* PBXTargetDependency */,
+			);
+			name = TransactionListTests;
+			productName = TransactionListTests;
+			productReference = 960CF0B7241FEE9300D8F195 /* TransactionListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BFF670222419385E004EA228 /* Transaction List */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFF6704224193860004EA228 /* Build configuration list for PBXNativeTarget "Transaction List" */;
@@ -176,6 +245,11 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Gil Hakemi";
 				TargetAttributes = {
+					960CF0B6241FEE9300D8F195 = {
+						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
+						TestTargetID = BFF670222419385E004EA228;
+					};
 					BFF670222419385E004EA228 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -195,11 +269,19 @@
 			projectRoot = "";
 			targets = (
 				BFF670222419385E004EA228 /* Transaction List */,
+				960CF0B6241FEE9300D8F195 /* TransactionListTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		960CF0B5241FEE9300D8F195 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BFF670212419385E004EA228 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,12 +296,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		960CF0B3241FEE9300D8F195 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				960CF0C8241FF02000D8F195 /* MockTransactionRepo.swift in Sources */,
+				960CF0C3241FEEE300D8F195 /* TransactionListModelTests.swift in Sources */,
+				960CF0CA241FF23100D8F195 /* TransactionPresenterTests.swift in Sources */,
+				960CF0CC241FF60400D8F195 /* MockTransactionView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BFF6701F2419385E004EA228 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				96A0B35C24197EE000D3DF79 /* TransactionJSONResponse.swift in Sources */,
-				96A0B356241961E800D3DF79 /* TransactionsRetriever.swift in Sources */,
+				96A0B356241961E800D3DF79 /* TransactionListModel.swift in Sources */,
 				96F1B279241FC60C002F1807 /* ImageLoader.swift in Sources */,
 				96F1B274241FBD85002F1807 /* PriceFormatter.swift in Sources */,
 				BFF670272419385E004EA228 /* AppDelegate.swift in Sources */,
@@ -238,6 +331,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		960CF0BD241FEE9300D8F195 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFF670222419385E004EA228 /* Transaction List */;
+			targetProxy = 960CF0BC241FEE9300D8F195 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		BFF6703124193860004EA228 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -250,6 +351,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		960CF0BF241FEE9300D8F195 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 557352Y7V9;
+				INFOPLIST_FILE = TransactionListTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gilhakemi.TransactionListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TransactionListTests/TransactionListTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Transaction List.app/Transaction List";
+			};
+			name = Debug;
+		};
+		960CF0C0241FEE9300D8F195 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 557352Y7V9;
+				INFOPLIST_FILE = TransactionListTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gilhakemi.TransactionListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TransactionListTests/TransactionListTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Transaction List.app/Transaction List";
+			};
+			name = Release;
+		};
 		BFF6704024193860004EA228 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -403,6 +549,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		960CF0BE241FEE9300D8F195 /* Build configuration list for PBXNativeTarget "TransactionListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				960CF0BF241FEE9300D8F195 /* Debug */,
+				960CF0C0241FEE9300D8F195 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BFF6701E2419385E004EA228 /* Build configuration list for PBXProject "Transaction List" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
