@@ -13,5 +13,5 @@ struct TransactionViewModel {
     let description: String
     let category: String
     let amount: String
-    let icon: UIImage
+    let icon: String
 }

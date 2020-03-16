@@ -31,7 +31,7 @@ extension TransactionsListPresenter {
             let transactionViewModel = TransactionViewModel(description: transaction.description,
                                                             category: transaction.category,
                                                             amount: transaction.value,
-                                                            icon: UIImage())
+                                                            icon: transaction.icon["url"] ?? "nil")
             
             transactionViewModelList.append(transactionViewModel)
         }
@@ -41,9 +41,10 @@ extension TransactionsListPresenter {
 }
 
 extension UIImageView {
-    func load(url: URL) {
+    func load(url: String) {
         DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
+            guard let imageUrl = URL(string: url) else { return }
+            if let data = try? Data(contentsOf: imageUrl) {
                 if let image = UIImage(data: data) {
                     DispatchQueue.main.async {
                         self?.image = image

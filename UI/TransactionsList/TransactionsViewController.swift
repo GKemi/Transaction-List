@@ -29,6 +29,7 @@ class TransactionsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
+        tableView.separatorInset = .zero
         transactionsInteractor?.getTransactions()
     }
     

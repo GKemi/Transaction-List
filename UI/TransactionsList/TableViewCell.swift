@@ -10,6 +10,10 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     @IBOutlet weak var transactionDescription: UILabel!
+    @IBOutlet weak var transactionCategory: UILabel!
+    @IBOutlet weak var transactionPrice: UILabel!
+    @IBOutlet weak var bankIcon: UIImageView!
+    
     
     
     override func awakeFromNib() {
@@ -18,5 +22,8 @@ class TableViewCell: UITableViewCell {
     
     func setTransaction(with transaction: TransactionViewModel) {
         self.transactionDescription.text = transaction.description
+        self.transactionCategory.text = transaction.category
+        self.transactionPrice.text = transaction.amount
+        self.bankIcon.load(url: transaction.icon)
     }
 }
